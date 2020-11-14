@@ -102,7 +102,7 @@ if [[ -d /etc/bash_completion.d/ ]]; then
 fi
 
 # We do this before the following so that all the paths work.
-for file in ~/.{bash_prompt,aliases,functions,path,dockerfunc,extra,exports}; do
+for file in ~/.{bash_prompt,aliases,functions,path,dockerfunc,exports,extra}; do
 	if [[ -r "$file" ]] && [[ -f "$file" ]]; then
 		# shellcheck source=/dev/null
 		source "$file"
@@ -173,5 +173,4 @@ if [[ -f "${HOME}/.travis/travis.sh" ]]; then
 	# shellcheck source=/dev/null
 	source "${HOME}/.travis/travis.sh"
 fi
-
 
