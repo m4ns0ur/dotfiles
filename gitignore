@@ -117,6 +117,8 @@ tags
 
 # Fortran module files
 *.mod
+# except go module file
+!go.mod
 
 # Compiled Static libraries
 *.lai
