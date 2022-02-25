@@ -6,3 +6,5 @@ if [[ -r "${HOME}/.bashrc" ]]; then
 	source "${HOME}/.bashrc"
 fi
 
+if [ -e /home/mansour/.nix-profile/etc/profile.d/nix.sh ]; then . /home/mansour/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+. "$HOME/.cargo/env"
