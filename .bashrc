@@ -174,4 +174,8 @@ if [[ -f "${HOME}/.travis/travis.sh" ]]; then
 	source "${HOME}/.travis/travis.sh"
 fi
 
+# shellcheck source=/dev/null
+if [ -e /home/mansour/.nix-profile/etc/profile.d/nix.sh ]; then . /home/mansour/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+# shellcheck source=/dev/null
 . "$HOME/.cargo/env"
