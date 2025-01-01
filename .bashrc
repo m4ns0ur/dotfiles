@@ -179,3 +179,7 @@ if [ -e /home/mansour/.nix-profile/etc/profile.d/nix.sh ]; then . /home/mansour/
 
 # shellcheck source=/dev/null
 . "$HOME/.cargo/env"
+
+# Wasmer
+export WASMER_DIR="/home/mansour/.wasmer"
+[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
