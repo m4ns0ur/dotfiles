@@ -163,6 +163,9 @@ eval "$(pyenv init -)"
 
 eval "$(_PIPENV_COMPLETE=zsh_source pipenv)"
 
+eval "$(uv generate-shell-completion zsh)"
+eval "$(uvx --generate-shell-completion zsh)"
+
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
