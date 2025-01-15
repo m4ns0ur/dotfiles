@@ -1,5 +1,6 @@
 # Credit to https://github.com/jessfraz/dotfiles
 # and to https://github.com/mathiasbynens/dotfiles
+# and to https://github.com/m4ns0ur/dotfiles-paul
 
 # Compiled Python files
 *.pyc
@@ -21,7 +22,7 @@ keyrace-mac.xcworkspace/
 ._*
 Thumbs.db
 
-# Files that might appear in the root of a volume
+# Files that might appear on external disks
 .DocumentRevisions-V100
 .fseventsd
 .Spotlight-V100
@@ -49,3 +50,15 @@ Temporary Items
 
 # Linux trash folder which might appear on any partition or disk
 .Trash-*<Paste>
+
+# working files
+.vim/viminfo
+.vim/swaps/*
+.vim/undo
+
+# No Thanks!
+node_modules
+
+
+# Dotfile for custom configuration
+.extra

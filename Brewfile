@@ -141,8 +141,3 @@ cask "hashicorp/tap/hashicorp-vagrant"
 # cask "macfuse"
 # brew "gromgit/fuse/ntfs-3g-mac"
 # cask "mounty"
-
-
-# installed outside:
-#  IINA
-#  MassaStation

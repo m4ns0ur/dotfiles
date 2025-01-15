@@ -6,6 +6,9 @@ if [[ "$SHELL" != *"/bin/bash" ]]; then
 	chsh -s /bin/bash
 fi
 
+# Source the path.sh file to make sure the PATH is set correctly
+source .path
+
 # If it's a macOS
 if [ "$(uname)" == "Darwin" ]; then
 	echo "macOS detected"
@@ -18,6 +21,9 @@ if [ "$(uname)" == "Darwin" ]; then
 	./brew.sh
 fi
 
+# Initialize and update submodules
+git submodule update --init --recursive
+
 echo "Creating symlinks for the dotfiles"
 ./symlink.sh
 
@@ -25,13 +31,14 @@ echo "Creating symlinks for the dotfiles"
 rsync -avh --progress --no-perms .config/ ~/.config/
 
 # Ask user if they want to install .macos
-echo "Do you want to install macOS settings? (y/n)"
+echo "Do you want to install macOS settings? (y/N)"
 read -r response
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
 	echo "Installing .macos"
 	./.macos
 fi
 
-source ~/.bash_profile
+# Source the .bash_profile to apply the changes
+source .bash_profile
 
-echo "Please restart the shell to apply the changes"
+echo "Please restart the shell to make sure all changes are applied"

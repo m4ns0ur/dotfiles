@@ -6,7 +6,6 @@ $directory
 $character
 """
 
-# format = "$all$kubernetes\n$directory\n$character"
 right_format = ""
 scan_timeout = 10
 
