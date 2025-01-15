@@ -1,0 +1,51 @@
+# Credit to https://github.com/jessfraz/dotfiles
+# and to https://github.com/mathiasbynens/dotfiles
+
+# Compiled Python files
+*.pyc
+
+# Folder view configuration files
+.DS_Store
+Desktop.ini
+
+##
+# OS X
+##
+.AppleDouble
+.LSOverride
+xcuserdata
+Pods
+keyrace-mac.xcworkspace/
+
+# Thumbnails cache files
+._*
+Thumbs.db
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+##
+# Linux
+##
+*~
+
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*<Paste>

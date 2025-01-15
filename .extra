@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+# .path
+export PATH="$HOME/workspace/scripts:$PATH"
+export PATH="$HOME/workspace/scripts/git-bin:$PATH"
+export PATH="$HOME/.wasmer/bin:$PATH"
+
+# export JAVA_HOME="$(/usr/libexec/java_home)"
+export JAVA_HOME="$(~/.sdkman/libexec/home java 23-open)"
+# export MAVEN_HOME="/usr/local/apache-maven"
+export MAVEN_HOME="$(~/.sdkman/libexec/home maven 3.9.9)"
+
+# .alias
+alias kc='kubectl'
+alias cat='bat -p'
+# alias bat='bat --style full'
+
+# .gitconfig
+GIT_AUTHOR_NAME='Mansour Rahimi'
+export GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
+git config --global user.name "$GIT_AUTHOR_NAME"
+GIT_AUTHOR_EMAIL='rahimi.mnr@gmail.com'
+export GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
+git config --global user.email "$GIT_AUTHOR_EMAIL"
+GH_USER='m4ns0ur'
+git config --global github.user "$GH_USER"
+git config --global safe.directory "$HOME/workspace"

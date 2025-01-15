@@ -1,0 +1,202 @@
+# Check here for all configurations: https://starship.rs/config/
+
+format = """
+($all\n)\
+$directory
+$character
+"""
+
+# format = "$all$kubernetes\n$directory\n$character"
+right_format = ""
+scan_timeout = 10
+
+[username]
+
+[hostname]
+
+[localip]
+
+[shlvl]
+
+[singularity]
+
+[kubernetes]
+# symbol = '🌊🐳🚢⚓⛵'
+symbol = '🐳 '
+style = 'dimmed white'
+format = '[$symbol$context( \($namespace\))]($style) '
+disabled = false
+
+[directory]
+style = 'cyan'
+# read_only = " "
+truncation_length = 10
+truncate_to_repo = false
+
+[vcsh]
+
+[git_branch]
+# symbol = " "
+style = 'purple'
+
+[git_commit]
+style = 'green'
+
+[git_state]
+style = 'yellow'
+
+[git_metrics]
+added_style = 'green'
+deleted_style = 'red'
+
+[git_status]
+style = 'red'
+
+[hg_branch]
+# symbol = " "
+
+[docker_context]
+# symbol = " "
+
+[package]
+# symbol = " "
+style = '208'
+
+[buf]
+# symbol = " "
+
+[c]
+# symbol = " "
+
+[cmake]
+
+[cobol]
+
+[container]
+
+# [daml]
+
+[dart]
+# symbol = " "
+
+[deno]
+
+[dotnet]
+
+[elixir]
+# symbol = " "
+
+[elm]
+# symbol = " "
+
+[erlang]
+
+[golang]
+# symbol = " "
+
+[haskell]
+# symbol = " "
+
+[helm]
+
+[java]
+# symbol = " "
+
+[julia]
+# symbol = " "
+
+[kotlin]
+
+[lua]
+
+[nim]
+# symbol = " "
+
+[nodejs]
+# symbol = " "
+
+[ocaml]
+
+[perl]
+
+[php]
+
+[pulumi]
+
+[purescript]
+
+[python]
+# symbol = " "
+# symbol = '🐍 '
+symbol = '🐉 '
+
+[rlang]
+
+[red]
+
+[ruby]
+
+[rust]
+# symbol = " "
+
+[scala]
+
+[swift]
+
+[terraform]
+
+[vlang]
+
+[vagrant]
+
+[zig]
+
+[nix_shell]
+# symbol = " "
+
+[conda]
+# symbol = " "
+# symbol = '🐍 '
+symbol = '🐉 '
+style = 'green'
+
+[spack]
+# symbol = "🅢 "
+
+[memory_usage]
+# symbol = " "
+
+[aws]
+# symbol = "  "
+style = 'yellow'
+
+[gcloud]
+
+[openstack]
+
+[azure]
+
+[env_var]
+
+[crystal]
+
+[custom]
+
+[sudo]
+
+[cmd_duration]
+
+[line_break]
+disabled = true
+
+[jobs]
+
+[battery]
+
+[time]
+
+[status]
+
+[shell]
+
+[character]
