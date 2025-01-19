@@ -12,68 +12,68 @@ apt update && apt upgrade -y
 
 # List of common CLI applications to install
 APPS=(
-    "git"             # Version control system
-    "git-lfs"         # Git extension for versioning large files
-    "build-essential" # Essential compilation tools
-    "gcc"             # GNU Compiler Collection
-    "clang"           # C/C++ compiler
-    "make"            # Build automation tool
     "autoconf"        # Automatic configure script builder
     "automake"        # Tool for generating GNU Standards-compliant Makefiles
-    "gettext"         # GNU internationalization library
-    "libtool"         # Generic library support script
-    "pkg-config"      # Package config system
-    "nodejs"          # JavaScript runtime
-    "npm"             # Node.js package manager
-    "imagemagick"     # Image manipulation tool
-    "golang"          # Go programming language
-    "rustup"          # Rust toolchain installer
-    "neovim"          # Vim-fork focused on extensibility and usability
-    "htop"            # Interactive process viewer
-    "mpv"             # Media player
-    "pipenv"          # Python dependency manager
-    "bat"             # Cat command with syntax highlighting
-    "fzf"             # Fuzzy file finder
-    "rsync"           # Remote synchronization tool
-    "curl"            # Command-line tool for transferring data with URLs
-    "wget"            # Network downloader
-    "vim"             # Text editor
-    "nvim"            # Neovim text editor
-    "tmux"            # Terminal multiplexer
-    "jq"              # JSON processor
-    "tree"            # Directory structure viewer
-    "nmap"            # Network scanner
-    "ripgrep"         # Fast grep alternative
-    "gdb"             # Debugger
-    "net-tools"       # Networking utilities
-    "traceroute"      # Network diagnostic tool
-    "whois"           # Domain lookup tool
-    "zip"             # Compression utility
-    "unzip"           # Decompression utility
-    "neofetch"        # System information tool
     "bash-completion" # Bash completion
-    "python3"         # Python 3 interpreter
-    "python3-pip"     # Python package manager
-    "sqlite3"         # Lightweight database
-    "openjdk-21-jdk"  # Java Development Kit
+    "bat"             # Cat command with syntax highlighting
+    "build-essential" # Essential compilation tools
+    "clang"           # C/C++ compiler
     "coreutils"       # GNU core utilities
-    "moreutils"       # Additional Unix utilities
-    "findutils"       # GNU find utilities
+    "curl"            # Command-line tool for transferring data with URLs
     "diffutils"       # File comparison utilities
     "dnsutils"        # DNS utilities
-    "gpg"             # GNU Privacy Guard
-    "gnupg"           # GNU Privacy Guard
-    "netcat-openbsd"  # TCP/IP swiss army knife
-    "socat"           # Multipurpose relay
     "exiv2"           # Image metadata manipulation tool
+    "findutils"       # GNU find utilities
+    "fzf"             # Fuzzy file finder
+    "gcc"             # GNU Compiler Collection
+    "gdb"             # Debugger
+    "gettext"         # GNU internationalization library
+    "git"             # Version control system
+    "git-lfs"         # Git extension for versioning large files
+    "gnupg"           # GNU Privacy Guard
+    "golang"          # Go programming language
+    "gpg"             # GNU Privacy Guard
+    "htop"            # Interactive process viewer
+    "imagemagick"     # Image manipulation tool
+    "jq"              # JSON processor
+    "libtool"         # Generic library support script
     "lua5.4"          # Lua programming language
     "lynx"            # Text-based web browser
+    "make"            # Build automation tool
+    "moreutils"       # Additional Unix utilities
+    "mpv"             # Media player
+    "neofetch"        # System information tool
+    "neovim"          # Vim-fork focused on extensibility and usability
+    "net-tools"       # Networking utilities
+    "netcat-openbsd"  # TCP/IP swiss army knife
+    "nmap"            # Network scanner
+    "nodejs"          # JavaScript runtime
+    "npm"             # Node.js package manager
+    "nvim"            # Neovim text editor
+    "openjdk-21-jdk"  # Java Development Kit
     "p7zip-full"      # 7z compression utility
     "p7zip-rar"       # RAR compression utility
     "pigz"            # Parallel gzip
+    "pipenv"          # Python dependency manager
+    "pkg-config"      # Package config system
     "pv"              # Pipe viewer
+    "python3"         # Python 3 interpreter
+    "python3-pip"     # Python package manager
     "rename"          # Perl file rename script
+    "ripgrep"         # Fast grep alternative
+    "rsync"           # Remote synchronization tool
+    "rustup"          # Rust toolchain installer
     "screen"          # Terminal multiplexer
+    "socat"           # Multipurpose relay
+    "sqlite3"         # Lightweight database
+    "tmux"            # Terminal multiplexer
+    "traceroute"      # Network diagnostic tool
+    "tree"            # Directory structure viewer
+    "unzip"           # Decompression utility
+    "vim"             # Text editor
+    "wget"            # Network downloader
+    "whois"           # Domain lookup tool
+    "zip"             # Compression utility
     "zopfli"          # Compression algorithm
 )
 
