@@ -7,39 +7,46 @@ export PATH="/usr/local/bin:$PATH:/sbin:/usr/local/sbin"
 export PATH="$HOME/.local/bin:$PATH"
 
 # Homebrew
-export PATH="/opt/homebrew/bin:$PATH"
-export PATH="/opt/homebrew/sbin:$PATH"
-export LIBRARY_PATH="/opt/homebrew/lib:$LIBRARY_PATH"
-export LDFLAGS="$LDFLAGS -L/opt/homebrew/lib"
-export CPPFLAGS="$CPPFLAGS -I/opt/homebrew/include"
+if [ -d '/opt/homebrew' ]; then
+    export PATH="/opt/homebrew/bin:$PATH"
+    export PATH="/opt/homebrew/sbin:$PATH"
+    export LIBRARY_PATH="/opt/homebrew/lib:$LIBRARY_PATH"
+    export LDFLAGS="$LDFLAGS -L/opt/homebrew/lib"
+    export CPPFLAGS="$CPPFLAGS -I/opt/homebrew/include"
 
-export PATH="$(brew --prefix python)/libexec/bin:$PATH"
+    # add gnubin for mac
+    export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 
-export GOROOT="$(brew --prefix golang)/libexec"
-# go path
-export GOPATH="$HOME/go"
-# add go path
-export PATH="$GOPATH/bin:$PATH"
+    [ -r '/opt/homebrew/etc/profile.d/bash_completion.sh' ] && source '/opt/homebrew/etc/profile.d/bash_completion.sh'
 
-# add gnubin for mac
-export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
+    # OpenSSL
+    export PATH="/opt/homebrew/opt/openssl/bin:$PATH"
+    export LDFLAGS="$LDFLAGS -L/opt/homebrew/opt/openssl/lib"
+    export CPPFLAGS="$CPPFLAGS -I/opt/homebrew/opt/openssl/include"
+    export OPENSSL_ROOT_DIR='/opt/homebrew/opt/openssl'
+    export PKG_CONFIG_PATH="/opt/homebrew/opt/openssl/lib/pkgconfig:$PKG_CONFIG_PATH"
 
-[ -r '/opt/homebrew/etc/profile.d/bash_completion.sh' ] && source '/opt/homebrew/etc/profile.d/bash_completion.sh'
-
-# OpenSSL
-export PATH="/opt/homebrew/opt/openssl/bin:$PATH"
-export LDFLAGS="$LDFLAGS -L/opt/homebrew/opt/openssl/lib"
-export CPPFLAGS="$CPPFLAGS -I/opt/homebrew/opt/openssl/include"
-export OPENSSL_ROOT_DIR='/opt/homebrew/opt/openssl'
-export PKG_CONFIG_PATH="/opt/homebrew/opt/openssl/lib/pkgconfig:$PKG_CONFIG_PATH"
-
-# Boost
-export BOOST_INCLUDE_DIR='/opt/homebrew/include'
+    # Boost
+    export BOOST_INCLUDE_DIR='/opt/homebrew/include'
+fi
 
 # CXXFLAGS
 export CXXFLAGS="$CXXFLAGS -stdlib=libc++ -Wno-deprecated-declarations -Wno-deprecated -framework CoreFoundation"
 
-export RUST_HOME="$(brew --prefix rustup)"
-export PATH="$RUST_HOME/bin:$PATH"
-export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
-export DYLD_LIBRARY_PATH="$(rustc --print sysroot)/lib:$DYLD_LIBRARY_PATH"
+# go path
+export GOPATH="$HOME/go"
+export PATH="$GOPATH/bin:$PATH"
+
+if command -v brew &> /dev/null; then
+    export PATH="$(brew --prefix python)/libexec/bin:$PATH"
+    export GOROOT="$(brew --prefix golang)/libexec"
+
+    # rust path
+    export RUST_HOME="$(brew --prefix rustup)"
+    export PATH="$RUST_HOME/bin:$PATH"
+fi
+
+if command -v rustc &> /dev/null; then
+    export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+    export DYLD_LIBRARY_PATH="$(rustc --print sysroot)/lib:$DYLD_LIBRARY_PATH"
+fi
