@@ -202,10 +202,3 @@
 [log]
 
 	date = relative
-[user]
-	name = Mansour Rahimi
-	email = rahimi.mnr@gmail.com
-[github]
-	user = m4ns0ur
-[safe]
-	directory = /Users/mansour/workspace

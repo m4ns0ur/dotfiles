@@ -37,15 +37,19 @@ git submodule update --init --recursive
 echo "Creating symlinks for the dotfiles"
 ./symlink.sh
 
-# Synchronize the .config folder
+# Synchronize the .config folder and .gitconfig
 rsync -avh --progress --no-perms .config/ ~/.config/
+rsync -avh --progress --no-perms .gitconfig ~/
 
-# Ask user if they want to install .macos
-echo "Do you want to install macOS settings? (y/N)"
-read -r response
-if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
-	echo "Installing .macos"
-	./.macos
+# If it's a macOS
+if [ "$(uname)" == "Darwin" ]; then
+	# Ask user if they want to install .macos
+	echo "Do you want to install macOS settings? (y/N)"
+	read -r response
+	if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
+		echo "Installing .macos"
+		./.macos
+	fi
 fi
 
 # Source the .bash_profile to apply the changes

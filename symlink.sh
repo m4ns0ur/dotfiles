@@ -3,7 +3,7 @@
 # Credit to https://github.com/alrra/dotfiles/blob/main/src/os/create_symbolic_links.sh
 
 # Finds all dotfiles in this folder (except .DS_Store and .macos)
-declare -a FILES=$(find . -maxdepth 1 -type f -name ".*" -not -name .DS_Store -not -name .git -not -name .macos | sed 's|//|/|g' | sed 's|./.|.|')
+declare -a FILES=$(find . -maxdepth 1 -type f -name ".*" -not -name .DS_Store -not -name .git -not -name .gitconfig -not -name .gitmodules -not -name .macos | sed 's|//|/|g' | sed 's|./.|.|')
 # Add the .vim_runtime folder
 FILES="$FILES .vim_runtime"
 

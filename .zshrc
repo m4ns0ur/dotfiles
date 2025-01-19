@@ -46,16 +46,16 @@ bindkey "^[[B" down-line-or-beginning-search
 
 [[ -s "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"
 
-eval "$(starship init zsh)"
+command -v starship &> /dev/null && eval "$(starship init zsh)"
 
 export PEENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+command -v pyenv &> /dev/null && eval "$(pyenv init -)"
 
-eval "$(_PIPENV_COMPLETE=zsh_source pipenv)"
+command -v pipenv &> /dev/null && eval "$(_PIPENV_COMPLETE=zsh_source pipenv)"
 
-eval "$(uv generate-shell-completion zsh)"
-eval "$(uvx --generate-shell-completion zsh)"
+command -v uv &> /dev/null && eval "$(uv generate-shell-completion zsh)"
+command -v uvx &> /dev/null && eval "$(uvx --generate-shell-completion zsh)"
 
 # Wasmer
 export WASMER_DIR="$HOME/.wasmer"
