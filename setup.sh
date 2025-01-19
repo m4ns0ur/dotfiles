@@ -19,6 +19,16 @@ if [ "$(uname)" == "Darwin" ]; then
 	fi
 	echo "Installing Homebrew bundle"
 	./brew.sh
+elif [ "$(uname)" == "Linux" ]; then
+	echo "Linux detected"
+	# If apt is available
+	if command -v apt &> /dev/null; then
+		echo "Installing apt packages"
+		./apt.sh
+	fi
+else
+	echo "Unsupported OS"
+	exit 1
 fi
 
 # Initialize and update submodules
