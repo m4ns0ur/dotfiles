@@ -125,9 +125,9 @@ fi
 
 [[ -s "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"
 
-export PEENV_ROOT="$HOME/.pyenv"
+export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+eval "$(pyenv init - bash)"
 
 if command -v brew &> /dev/null; then
 	# Save Homebrew’s installed location.
