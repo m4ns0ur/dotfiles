@@ -103,31 +103,22 @@ done
 complete -W "NSGlobalDomain" defaults
 
 # source kubectl bash completion
-if hash kubectl 2>/dev/null; then
-	# shellcheck source=/dev/null
-	source <(kubectl completion bash)
-fi
+command -v kubectl &> /dev/null && source <(kubectl completion bash)
 
 # get the gh completions
-if hash gh 2>/dev/null; then
-	eval "$(gh completion -s bash)"
-fi
+command -v gh &> /dev/null && eval "$(gh completion -s bash)"
 
 # get the rustup completions
-if hash rustup 2>/dev/null; then
-	eval "$(rustup completions bash)"
-fi
+command -v rustup &> /dev/null && eval "$(rustup completions bash)"
 
-# start starship
-if hash starship 2>/dev/null; then
-	eval "$(starship init bash)"
-fi
+# initialize starship
+command -v starship &> /dev/null && eval "$(starship init bash)"
 
 [[ -s "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"
 
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - bash)"
+command -v pyenv &> /dev/null && eval "$(pyenv init - bash)"
 
 if command -v brew &> /dev/null; then
 	# Save Homebrew’s installed location.
@@ -144,10 +135,10 @@ if command -v brew &> /dev/null; then
 	fi
 fi
 
-eval "$(_PIPENV_COMPLETE=bash_source pipenv)"
+command -v pipenv &> /dev/null && eval "$(_PIPENV_COMPLETE=bash_source pipenv)"
 
-eval "$(uv generate-shell-completion bash)"
-# eval "$(uvx generate-shell-completion bash)"
+command -v uv &> /dev/null && eval "$(uv generate-shell-completion bash)"
+# command -v uvx &> /dev/null && eval "$(uvx generate-shell-completion bash)"
 
 # Wasmer
 export WASMER_DIR="$HOME/.wasmer"
