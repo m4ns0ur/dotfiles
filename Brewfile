@@ -43,6 +43,7 @@ brew "mpv"
 brew "neovim"
 brew "nmap"
 brew "node"
+brew "ollama"
 # I use sdkman for now: https://sdkman.io/
 # brew "openjdk"
 brew "openssh"
