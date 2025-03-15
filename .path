@@ -45,6 +45,9 @@ if command -v brew &> /dev/null; then
     # rust path
     export RUST_HOME="$(brew --prefix rustup)"
     export PATH="$RUST_HOME/bin:$PATH"
+
+	# postgres client
+	export PATH="$(brew --prefix libpq)/bin:$PATH"
 fi
 
 if command -v rustc &> /dev/null; then
