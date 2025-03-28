@@ -24,7 +24,7 @@ elif [ "$(uname)" == "Linux" ]; then
 	# If apt is available
 	if command -v apt &> /dev/null; then
 		echo "Installing apt packages"
-		./apt.sh
+		sudo ./apt.sh
 	fi
 else
 	echo "Unsupported OS"

@@ -87,6 +87,7 @@ cask "google-chrome", args: { require_sha: false }
 # cask "idafree"
 cask "intellij-idea-ce"
 cask "iterm2"
+cask "lm-studio"
 # cask "naps2"
 cask "openboard"
 cask "steam", args: { require_sha: false }
