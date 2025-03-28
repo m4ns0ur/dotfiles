@@ -5,6 +5,7 @@
 # set arguments for all 'brew install --cask' commands
 cask_args appdir: "/Applications", require_sha: true
 
+# brew "aider"
 brew "autoconf"
 brew "automake"
 # Install a modern version of Bash.
@@ -60,6 +61,7 @@ brew "qemu"
 brew "rename"
 brew "rsync"
 brew "rustup"
+brew "sane-backends"
 brew "screen"
 brew "socat"
 brew "ssh-copy-id"
@@ -75,6 +77,7 @@ brew "zopfli"
 cask "arduino-ide"
 cask "balenaetcher"
 cask "chatgpt"
+# cask "cursor"
 cask "font-fira-code"
 cask "font-hack"
 cask "ghidra"
@@ -84,6 +87,7 @@ cask "google-chrome", args: { require_sha: false }
 # cask "idafree"
 cask "intellij-idea-ce"
 cask "iterm2"
+# cask "naps2"
 cask "openboard"
 cask "steam", args: { require_sha: false }
 cask "telegram"

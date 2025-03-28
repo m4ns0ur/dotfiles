@@ -8,7 +8,7 @@
 
 # Update and upgrade the package list
 echo "Updating package list..."
-apt update && apt upgrade -y
+sudo apt update && apt upgrade -y
 
 # List of common CLI applications to install
 APPS=(
@@ -81,12 +81,12 @@ APPS=(
 echo "Installing applications..."
 for app in "${APPS[@]}"; do
   echo "Installing $app..."
-  apt install -y "$app"
+  sudo apt install -y "$app"
 done
 
 echo "Cleaning up..."
-apt autoremove -y
-apt autoclean
+sudo apt autoremove -y
+sudo apt autoclean
 
 # Installation summary
 echo "Installation complete! The following applications were installed:"
