@@ -13,6 +13,9 @@ brew upgrade
 # Install Brewfile bundle
 brew bundle install
 
+# Upgrade any already-installed casks.
+brew upgrade --cask --greedy
+
 # Save Homebrew’s installed location.
 BREW_PREFIX=$(brew --prefix)
 
