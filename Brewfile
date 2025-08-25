@@ -77,10 +77,11 @@ brew "zopfli"
 
 cask "arduino-ide"
 cask "balenaetcher"
-cask "chatgpt"
+# cask "chatgpt"
 # cask "cursor"
 cask "font-fira-code"
 cask "font-hack"
+cask "freecad"
 cask "ghidra"
 cask "godot"
 cask "google-chrome", args: { require_sha: false }
