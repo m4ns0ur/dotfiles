@@ -9,3 +9,6 @@
 export PATH="$PATH:/Users/mansour/.lmstudio/bin"
 # End of LM Studio CLI section
 
+
+# Added by Antigravity
+export PATH="/Users/mansour/.antigravity/antigravity/bin:$PATH"

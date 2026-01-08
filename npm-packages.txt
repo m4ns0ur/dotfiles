@@ -1,3 +1,4 @@
 npm install -g @musistudio/claude-code-router
 npm install -g cline
+npm install -g vibe-kanban
 

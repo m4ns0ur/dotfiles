@@ -82,6 +82,7 @@ brew "wget"
 brew "zopfli"
 
 
+cask "antigravity"
 cask "arduino-ide"
 cask "balenaetcher"
 # cask "chatgpt"
