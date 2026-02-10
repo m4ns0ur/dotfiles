@@ -67,3 +67,12 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/mansour/.lmstudio/bin"
+# End of LM Studio CLI section
+
+# Added by Antigravity
+export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+

@@ -16,6 +16,7 @@ brew "block-goose-cli"
 # Install GNU core utilities (those that come with macOS are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 brew "coreutils"
+brew "deno"
 brew "dua-cli"
 # brew "exa"
 brew "exiv2"
@@ -82,6 +83,7 @@ brew "uv"
 brew "vim"
 brew "wasmer"
 brew "wget"
+brew "yarn"
 brew "zopfli"
 
 
