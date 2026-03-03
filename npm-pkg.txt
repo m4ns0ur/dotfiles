@@ -3,4 +3,5 @@ npm install -g vibe-kanban
 
 npm install -g @modelcontextprotocol/inspector
 npm install -g @musistudio/claude-code-router
+npm install -g @mariozechner/pi-coding-agent
 
