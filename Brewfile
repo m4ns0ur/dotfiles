@@ -5,105 +5,129 @@
 # set arguments for all 'brew install --cask' commands
 cask_args appdir: "/Applications", require_sha: true
 
+# Build tools and development utilities
 brew "autoconf"
 brew "automake"
 # Install a modern version of Bash.
 brew "bash"
 brew "bash-completion2"
-brew "bat"
+brew "bat"  # Cat clone with syntax highlighting
 brew "block-goose-cli"
-brew "copilot-cli"
-# Install GNU core utilities (those that come with macOS are outdated).
-# Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
-brew "coreutils"
-brew "deno"
-brew "dua-cli"
+
+# GNU core utilities (those that come with macOS are outdated)
+brew "coreutils"  # GNU core utilities
+brew "deno"  # JavaScript runtime
+brew "dua-cli"  # Fast disk usage analyzer
 # brew "exa"
 brew "exiv2"
+
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
-brew "findutils"
-brew "fzf"
-brew "gcc"
-brew "gemini-cli"
-brew "gettext"
-brew "git"
-brew "git-lfs"
+brew "findutils"  # GNU find utilities
+brew "fzf"  # Command-line fuzzy finder
+brew "gcc"  # GCC compiler
+brew "gemini-cli"  # Gemini web browser
+
+# Version control and text processing
+brew "gettext"  # Internationalization utilities
+brew "git"  # Version control system
+brew "git-lfs"  # Git Large File Storage
 # Install GNU `sed`, overwriting the built-in `sed`.
 brew "gnu-sed"
+
+# Security and encryption
 # Install GnuPG to enable PGP-signing commits.
-brew "gnupg"
-brew "go"
-brew "grep"
-brew "gs"
-brew "handbrake"
-brew "htop"
-brew "imagemagick"
-brew "libgcrypt"
-brew "libpq"
-brew "libtool"
-brew "llama.cpp"
-brew "localai"
-brew "lua"
-brew "lynx"
-brew "maigret"
-brew "make"
-brew "monolith"
+brew "gnupg"  # PGP encryption
+brew "go"  # Go programming language
+brew "grep"  # GNU grep
+brew "gs"  # Ghostscript
+brew "handbrake"  # Video transcoder
+brew "htop"  # Interactive process viewer
+
+# Image and AI tools
+brew "imagemagick"  # Image manipulation
+brew "libgcrypt"  # GNU cryptographic library
+brew "libpq"  # PostgreSQL client libraries
+brew "libtool"  # Library creation utility
+brew "llama.cpp"  # LLM inference engine
+brew "localai"  # Local AI framework
+brew "lua"  # Lua scripting language
+
+# Utilities and browsers
+brew "lynx"  # Text-based web browser
+brew "maigret"  # Multi-platform reconnaissance tool
+brew "make"  # Build automation
+brew "mlx-lm"  # Local LLM runner
+brew "monolith"  # Static site generator
 # Install some other useful utilities like `sponge`.
 brew "moreutils"
-brew "mpv"
-brew "neovim"
-brew "nmap"
-brew "node"
-brew "ollama"
+brew "mpv"  # Media player
+brew "neovim"  # Vim-based text editor
+brew "nmap"  # Network scanner
+
+# Development tools and package managers
+brew "node"  # JavaScript runtime
+brew "ollama"  # Local LLM server
 # I use sdkman for now: https://sdkman.io/
 # brew "openjdk"
-brew "openssh"
-brew "p7zip"
-brew "pigz"
-brew "pipenv"
-brew "pkg-config"
-brew "pv"
-brew "pyenv"
-brew "qemu"
-brew "qwen-code"
-brew "rename"
-brew "ripgrep"
-brew "rsync"
-brew "rustup"
-brew "sane-backends"
-brew "screen"
+brew "openssh"  # SSH client/server
+brew "p7zip"  # 7-Zip archiver
+brew "pigz"  # Parallel gzip
+brew "pipenv"  # Python environment manager
+brew "pkg-config"  # Package configuration utility
+brew "pv"  # Data pipeline viewer
+brew "pyenv"  # Python version manager
+
+# Virtualization and emulation
+brew "qemu"  # Emulator
+brew "qwen-code"  # CLI tool
+brew "rename"  # Batch rename utility
+brew "ripgrep"  # Fast text search
+brew "rsync"  # File synchronization
+brew "rustup"  # Rust toolchain manager
+
+# Network and terminal tools
+brew "sane-backends"  # Scanner support
+brew "screen"  # Terminal multiplexer
 # Use maigret instead
 # brew "sherlock"
-brew "socat"
-brew "ssh-copy-id"
-brew "anomalyco/tap/opencode"
-brew "starship"
-brew "tree"
-brew "uv"
-brew "vim"
-brew "wasmer"
-brew "wget"
-brew "yarn"
-brew "zopfli"
+brew "socat"  # Socket activation tool
+brew "ssh-copy-id"  # SSH key installer
+
+# AI and productivity tools
+brew "opencode"  # AI coding assistant
+brew "starship"  # Cross-shell prompt
+brew "tokei"  # Code counter
+brew "tree"  # Directory tree viewer
+brew "uv"  # Python package manager
+brew "vim"  # Text editor
+
+# Compression and download tools
+brew "wasmer"  # WASM runtime
+brew "wget"  # File downloader
+brew "yarn"  # JavaScript package manager
+brew "zopfli"  # Compression tool
 
 
-cask "antigravity"
+# cask "antigravity"
 cask "arduino-ide"
 cask "balenaetcher"
 # cask "chatgpt"
 cask "claude-code"
 cask "codex"
-cask "cursor"
+cask "comfyui"
+cask "copilot-cli"
+# cask "cursor"
+# cask "diffusionbee"
+# cask "draw-things"
 cask "font-fira-code"
 cask "font-hack"
 cask "freecad"
 cask "ghidra"
-cask "ghostty"
+# cask "ghostty"
 cask "godot"
 cask "google-chrome", args: { require_sha: false }
-cask "grandperspective"
+# cask "grandperspective"
 cask "handbrake-app"
-# disabled
 # cask "idafree"
 cask "intellij-idea-ce"
 cask "iterm2"
@@ -111,8 +135,6 @@ cask "krita"
 cask "libreoffice"
 cask "lm-studio"
 # cask "naps2"
-cask "openboard"
-# cask "Sikarugir-App/sikarugir/sikarugir"
 cask "steam", args: { require_sha: false }
 cask "telegram"
 cask "tor-browser"
@@ -123,6 +145,7 @@ cask "vnc-viewer"
 cask "whatsapp"
 cask "whisky"
 cask "xquartz"
+# cask "zed"
 
 tap "hashicorp/tap"
 cask "hashicorp/tap/hashicorp-vagrant"

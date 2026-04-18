@@ -1,2 +1,2 @@
 cargo install llmfit
-
+cargo install loc
