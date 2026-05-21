@@ -25,7 +25,6 @@ brew "exiv2"
 brew "findutils"  # GNU find utilities
 brew "fzf"  # Command-line fuzzy finder
 brew "gcc"  # GCC compiler
-brew "gemini-cli"  # Gemini web browser
 
 # Version control and text processing
 brew "gettext"  # Internationalization utilities
