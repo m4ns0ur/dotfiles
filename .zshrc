@@ -48,12 +48,6 @@ bindkey "^[[B" down-line-or-beginning-search
 
 command -v starship &> /dev/null && eval "$(starship init zsh)"
 
-export PEENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-command -v pyenv &> /dev/null && eval "$(pyenv init -)"
-
-command -v pipenv &> /dev/null && eval "$(_PIPENV_COMPLETE=zsh_source pipenv)"
-
 command -v uv &> /dev/null && eval "$(uv generate-shell-completion zsh)"
 command -v uvx &> /dev/null && eval "$(uvx --generate-shell-completion zsh)"
 

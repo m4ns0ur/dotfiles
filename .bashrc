@@ -116,10 +116,6 @@ command -v starship &> /dev/null && eval "$(starship init bash)"
 
 [[ -s "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"
 
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-command -v pyenv &> /dev/null && eval "$(pyenv init - bash)"
-
 if command -v brew &> /dev/null; then
 	# Save Homebrew’s installed location.
 	BREW_PREFIX=$(brew --prefix)
@@ -134,8 +130,6 @@ if command -v brew &> /dev/null; then
 		source /etc/bash_completion
 	fi
 fi
-
-command -v pipenv &> /dev/null && eval "$(_PIPENV_COMPLETE=bash_source pipenv)"
 
 command -v uv &> /dev/null && eval "$(uv generate-shell-completion bash)"
 # command -v uvx &> /dev/null && eval "$(uvx generate-shell-completion bash)"

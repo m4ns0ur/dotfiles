@@ -47,7 +47,7 @@ brew "imagemagick"  # Image manipulation
 brew "libgcrypt"  # GNU cryptographic library
 brew "libpq"  # PostgreSQL client libraries
 brew "libtool"  # Library creation utility
-brew "llama.cpp"  # LLM inference engine
+# brew "llama.cpp"  # LLM inference engine
 brew "localai"  # Local AI framework
 brew "lua"  # Lua scripting language
 
