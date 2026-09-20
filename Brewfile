@@ -43,6 +43,7 @@ brew "handbrake"  # Video transcoder
 brew "htop"  # Interactive process viewer
 
 # Image and AI tools
+brew "hf" # Hugging Face CLI
 brew "imagemagick"  # Image manipulation
 brew "libgcrypt"  # GNU cryptographic library
 brew "libpq"  # PostgreSQL client libraries
