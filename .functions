@@ -351,3 +351,30 @@ gifify() {
 webmify(){
 	ffmpeg -i "$1" -vcodec libvpx -acodec libvorbis -isync -copyts -aq 80 -threads 3 -qmax 30 -y "$2" "$1.webm"
 }
+
+ports() {
+  local os
+  os="$(uname -s)"
+
+  case "$os" in
+    Darwin)
+      # macOS: lsof is installed by default
+      sudo lsof -iTCP -sTCP:LISTEN -n -P
+      ;;
+    Linux)
+      # Linux: ss is part of iproute2 and available on virtually all modern distros
+      if command -v ss >/dev/null 2>&1; then
+        sudo ss -tuln
+      elif command -v lsof >/dev/null 2>&1; then
+        sudo lsof -iTCP -sTCP:LISTEN -n -P
+      else
+        sudo netstat -tuln
+      fi
+      ;;
+    *)
+      echo "Unsupported operating system: $os" >&2
+      return 1
+      ;;
+  esac
+}
+
