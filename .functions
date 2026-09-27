@@ -353,28 +353,29 @@ webmify(){
 }
 
 ports() {
+  # 1. Prefer lsof on any system if it's available (gives PID & Process Name)
+  if command -v lsof >/dev/null 2>&1; then
+    sudo lsof -iTCP -sTCP:LISTEN -n -P
+    return 0
+  fi
+
+  # 2. Linux fallbacks if lsof is missing
   local os
   os="$(uname -s)"
 
-  case "$os" in
-    Darwin)
-      # macOS: lsof is installed by default
-      sudo lsof -iTCP -sTCP:LISTEN -n -P
-      ;;
-    Linux)
-      # Linux: ss is part of iproute2 and available on virtually all modern distros
-      if command -v ss >/dev/null 2>&1; then
-        sudo ss -tuln
-      elif command -v lsof >/dev/null 2>&1; then
-        sudo lsof -iTCP -sTCP:LISTEN -n -P
-      else
-        sudo netstat -tuln
-      fi
-      ;;
-    *)
-      echo "Unsupported operating system: $os" >&2
+  if [ "$os" = "Linux" ]; then
+    if command -v ss >/dev/null 2>&1; then
+      # -p shows process info, -t (tcp), -u (udp), -l (listen), -n (numeric)
+      sudo ss -tulnp
+    elif command -v netstat >/dev/null 2>&1; then
+      sudo netstat -tulnp
+    else
+      echo "Error: Neither lsof, ss, nor netstat is available." >&2
       return 1
-      ;;
-  esac
+    fi
+  else
+    echo "Error: lsof is not installed and no fallback available for $os." >&2
+    return 1
+  fi
 }
 
