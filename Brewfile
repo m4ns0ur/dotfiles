@@ -19,8 +19,10 @@ brew "findutils"  # GNU find utilities
 brew "fzf"  # Command-line fuzzy finder
 brew "gcc"  # GCC compiler
 brew "gettext"  # Internationalization utilities
+brew "gh"  # GitHub CLI
 brew "git"  # Version control system
 brew "git-lfs"  # Git Large File Storage
+brew "glow"  # Markdown reader
 # Install GNU `sed`, overwriting the built-in `sed`.
 brew "gnu-sed"
 # Install GnuPG to enable PGP-signing commits.
