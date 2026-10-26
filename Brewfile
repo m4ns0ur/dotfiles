@@ -31,6 +31,7 @@ brew "go"  # Go programming language
 brew "grep"  # GNU grep
 brew "gs"  # Ghostscript
 brew "handbrake"  # Video transcoder
+brew "hugo"  # Static site generator
 brew "htop"  # Interactive process viewer
 brew "hf" # Hugging Face CLI
 brew "imagemagick"  # Image manipulation
